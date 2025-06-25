@@ -293,7 +293,7 @@ class BlePeripheralPlugin : FlutterPlugin, BlePeripheralChannel, ActivityAware {
                         if (device.bondState == BluetoothDevice.BOND_NONE) {
                             // Wait for bonding
                             listOfDevicesWaitingForBond.add(device.address)
-                            device.createBond()
+                            //device.createBond()
                         } else if (device.bondState == BluetoothDevice.BOND_BONDED) {
                             handler?.post {
                                 gattServer?.connect(device, true)
