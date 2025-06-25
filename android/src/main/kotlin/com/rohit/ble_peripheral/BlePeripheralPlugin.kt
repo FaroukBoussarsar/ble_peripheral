@@ -589,7 +589,7 @@ class BlePeripheralPlugin : FlutterPlugin, BlePeripheralChannel, ActivityAware {
 
                 // if waiting for connection and device is bonded
                 val waitingForConnection = listOfDevicesWaitingForBond.contains(device?.address)
-                if (state == BluetoothDevice.BOND_BONDED && device != null && waitingForConnection) {
+                if ( device != null && waitingForConnection) {
                     listOfDevicesWaitingForBond.remove(device.address)
                     handler?.post {
                         gattServer?.connect(device, true)
