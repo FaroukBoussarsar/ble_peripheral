@@ -1,0 +1,6 @@
+framework module ble_peripheral {
+  umbrella header "ble_peripheral-umbrella.h"
+
+  export *
+  module * { export * }
+}
