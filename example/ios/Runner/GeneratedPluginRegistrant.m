@@ -6,10 +6,10 @@
 
 #import "GeneratedPluginRegistrant.h"
 
-#if __has_include(<ble_peripheral/BlePeripheralPlugin.h>)
-#import <ble_peripheral/BlePeripheralPlugin.h>
+#if __has_include(<flutter_ble_peripheral_slave/BlePeripheralPlugin.h>)
+#import <flutter_ble_peripheral_slave/BlePeripheralPlugin.h>
 #else
-@import ble_peripheral;
+@import flutter_ble_peripheral_slave;
 #endif
 
 @implementation GeneratedPluginRegistrant

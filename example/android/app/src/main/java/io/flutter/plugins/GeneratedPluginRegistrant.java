@@ -18,7 +18,7 @@ public final class GeneratedPluginRegistrant {
     try {
       flutterEngine.getPlugins().add(new com.rohit.ble_peripheral.BlePeripheralPlugin());
     } catch (Exception e) {
-      Log.e(TAG, "Error registering plugin ble_peripheral, com.rohit.ble_peripheral.BlePeripheralPlugin", e);
+      Log.e(TAG, "Error registering plugin flutter_ble_peripheral_slave, com.rohit.ble_peripheral.BlePeripheralPlugin", e);
     }
   }
 }
