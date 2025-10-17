@@ -55,7 +55,8 @@ class _BlePeripheralExampleState extends State<BlePeripheralExample> {
 
   void _addLog(String message) {
     setState(() {
-      logs.insert(0, '${DateTime.now().toString().substring(11, 19)}: $message');
+      logs.insert(
+          0, '${DateTime.now().toString().substring(11, 19)}: $message');
       if (logs.length > 20) logs.removeLast();
     });
   }
@@ -81,7 +82,7 @@ class _BlePeripheralExampleState extends State<BlePeripheralExample> {
       _addLog('Please initialize first');
       return;
     }
-    
+
     try {
       await heartbeatDevice.startAdvertising();
       setState(() {
@@ -213,8 +214,10 @@ class _BlePeripheralExampleState extends State<BlePeripheralExample> {
 /// Simple heartbeat BLE peripheral device
 class SimpleHeartbeatDevice {
   // Service and Characteristic UUIDs
-  static const String serviceUuid = "0000180D-0000-1000-8000-00805F9B34FB"; // Heart Rate Service
-  static const String characteristicUuid = "00002A37-0000-1000-8000-00805F9B34FB"; // Heart Rate Measurement
+  static const String serviceUuid =
+      "0000180D-0000-1000-8000-00805F9B34FB"; // Heart Rate Service
+  static const String characteristicUuid =
+      "00002A37-0000-1000-8000-00805F9B34FB"; // Heart Rate Measurement
 
   // Track connected devices and their subscriptions
   final Set<String> connectedDevices = {};
@@ -306,7 +309,7 @@ class SimpleHeartbeatDevice {
         heartbeatCounter++;
         // Simulate heart rate between 60-100 bpm
         int heartRate = 60 + (heartbeatCounter % 40);
-        
+
         // Heart Rate Measurement format: flags byte + heart rate value
         Uint8List heartRateData = Uint8List.fromList([
           0x00, // Flags: Heart Rate Value Format is UINT8
@@ -319,7 +322,8 @@ class SimpleHeartbeatDevice {
             value: heartRateData,
             deviceId: null, // null sends to all connected devices
           );
-          print("Sent heartbeat $heartbeatCounter: ${heartRate}bpm to ${connectedDevices.length} device(s)");
+          print(
+              "Sent heartbeat $heartbeatCounter: ${heartRate}bpm to ${connectedDevices.length} device(s)");
         } catch (e) {
           print("Error sending heartbeat: $e");
         }

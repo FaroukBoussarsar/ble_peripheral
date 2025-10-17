@@ -1,6 +1,6 @@
 name: ble_peripheral_example
 description: Example app for flutter_ble_peripheral_slave plugin
-publish_to: 'none'
+publish_to: "none"
 
 version: 1.0.0+1
 
