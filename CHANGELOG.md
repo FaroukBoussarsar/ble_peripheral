@@ -1,3 +1,8 @@
+## 2.4.2
+
+- Forked and republished as `flutter_ble_peripheral_slave`
+- Repository moved to https://github.com/FaroukBoussarsar/ble_peripheral
+
 ## 2.4.0
 
 - BreakingChange: `onCharacteristicSubscriptionChange` also send `String? name`

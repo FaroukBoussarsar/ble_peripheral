@@ -16,7 +16,7 @@ import 'dart:async';
 import 'dart:io' show Platform;
 import 'dart:typed_data';
 
-import 'package:ble_peripheral/ble_peripheral.dart';
+import 'package:flutter_ble_peripheral_slave/flutter_ble_peripheral_slave.dart';
 import 'package:flutter/material.dart';
 
 /// Example BLE device controller demonstrating advanced usage patterns
