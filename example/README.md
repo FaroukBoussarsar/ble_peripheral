@@ -1,6 +1,37 @@
 # BLE Peripheral Examples
 
-This directory contains example code demonstrating advanced usage patterns of the `ble_peripheral` package, inspired by the HHPT Device Simulator implementation.
+This directory contains example code demonstrating advanced usage patterns of the `flutter_ble_peripheral_slave` package.
+
+## ⚠️ Important: iOS/macOS Discovery Limitation
+
+**Known Issue**: iOS devices cannot discover BLE peripherals advertised by macOS or other iOS devices. This is an Apple platform limitation, not a bug in this package.
+
+### Why This Happens
+
+- **Apple Privacy Filters**: iOS automatically filters out BLE advertisements from other Apple devices to reduce interference from Continuity features (Handoff, AirDrop, Universal Clipboard, etc.)
+- **CoreBluetooth Restriction**: This is a deliberate CoreBluetooth framework limitation for privacy and performance
+- **Android Works Fine**: Android devices don't have these Apple-specific filters and can discover macOS/iOS peripherals normally
+
+### Testing Recommendations
+
+✅ **For Development/Testing:**
+
+- Use an **Android device** to test peripherals running on macOS/iOS
+- Use **nRF Connect** (Android) or similar BLE scanner apps
+- Test iOS peripheral → Android central (works)
+- Test macOS peripheral → Android central (works)
+- Test Android peripheral → iOS central (works)
+
+❌ **Won't Work:**
+
+- iOS device → macOS peripheral
+- iOS device → iOS peripheral
+- macOS → macOS peripheral (in most cases)
+
+✅ **For Production:**
+
+- Deploy your peripheral on **non-Apple hardware** (Raspberry Pi, ESP32, Android, etc.)
+- iOS/macOS central apps can then discover and connect to these peripherals normally
 
 ## Examples
 

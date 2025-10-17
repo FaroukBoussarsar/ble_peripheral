@@ -148,4 +148,6 @@ Should work out of box on Windows
 
 ## Note
 
+⚠️ **Important Platform Limitation**: iOS devices cannot discover BLE peripherals advertised by macOS or iOS devices due to Apple's privacy filters. Android devices work perfectly. See [PLATFORM_LIMITATIONS.md](PLATFORM_LIMITATIONS.md) for details and workarounds.
+
 Feel free to contribute or report any bug!

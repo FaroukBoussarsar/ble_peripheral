@@ -146,10 +146,40 @@ class ExampleMenuPage extends StatelessWidget {
                       ),
                       const SizedBox(height: 8),
                       const Text(
-                        'These examples demonstrate how to use your device as a BLE peripheral. You can connect to them using a BLE scanner app like nRF Connect.',
+                        'These examples demonstrate how to use your device as a BLE peripheral. Connect using nRF Connect or similar BLE scanner apps.',
                         textAlign: TextAlign.center,
                         style: TextStyle(fontSize: 12),
                       ),
+                      if (Platform.isMacOS || Platform.isIOS) ...[
+                        const SizedBox(height: 8),
+                        Container(
+                          padding: const EdgeInsets.all(8.0),
+                          decoration: BoxDecoration(
+                            color: Colors.orange.shade50,
+                            borderRadius: BorderRadius.circular(8),
+                            border: Border.all(color: Colors.orange.shade300),
+                          ),
+                          child: Row(
+                            children: [
+                              Icon(
+                                Icons.warning_amber_rounded,
+                                color: Colors.orange.shade700,
+                                size: 16,
+                              ),
+                              const SizedBox(width: 8),
+                              Expanded(
+                                child: Text(
+                                  'Note: iOS devices cannot discover peripherals on macOS/iOS due to Apple privacy filters. Use Android for testing.',
+                                  style: TextStyle(
+                                    fontSize: 11,
+                                    color: Colors.orange.shade900,
+                                  ),
+                                ),
+                              ),
+                            ],
+                          ),
+                        ),
+                      ],
                     ],
                   ),
                 ),
