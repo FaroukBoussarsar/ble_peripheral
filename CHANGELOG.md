@@ -1,3 +1,11 @@
+## 2.4.3
+
+- Fixed podspec file naming to match package name (`flutter_ble_peripheral_slave.podspec`)
+- Updated podspec metadata with correct version and repository information
+- Added complete Flutter example app with Material Design UI
+- Fixed iOS/Android project structure for example app
+- Updated all package imports and references
+
 ## 2.4.2
 
 - Forked and republished as `flutter_ble_peripheral_slave`

@@ -4,7 +4,7 @@
 #
 Pod::Spec.new do |s|
   s.name             = 'flutter_ble_peripheral_slave'
-  s.version          = '2.4.2'
+  s.version          = '2.4.3'
   s.summary          = 'Ble peripheral is a Flutter plugin that allows you to use your device as Bluetooth Low Energy (BLE) peripheral'
   s.description      = <<-DESC
 Ble peripheral is a Flutter plugin that allows you to use your device as Bluetooth Low Energy (BLE) peripheral
