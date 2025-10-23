@@ -1,3 +1,13 @@
+## 2.4.5
+
+- Fixed dartdoc ambiguous reexport warnings by hiding internal Pigeon utilities
+- Improved pub.dev scoring compliance
+
+## 2.4.4
+
+- Fixed documentation generation issues
+- Improved package metadata for pub.dev
+
 ## 2.4.3
 
 - Fixed podspec file naming to match package name (`flutter_ble_peripheral_slave.podspec`)
